@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.kalkulator.MainTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2025-05-16T23:54:31.266Z" hostname="DESKTOP-8NSG9AB" time="0.052">
+  <properties/>
+  <testcase name="testMain_HappyPath_Multiplication()" classname="org.kalkulator.MainTest" time="0.019"/>
+  <testcase name="testMain_InvalidOperator()" classname="org.kalkulator.MainTest" time="0.002"/>
+  <testcase name="testMain_HappyPath_Subtraction()" classname="org.kalkulator.MainTest" time="0.002"/>
+  <testcase name="testAskForContinue_No()" classname="org.kalkulator.MainTest" time="0.003"/>
+  <testcase name="testGetOperatorChoice()" classname="org.kalkulator.MainTest" time="0.001"/>
+  <testcase name="testShowMenu()" classname="org.kalkulator.MainTest" time="0.001"/>
+  <testcase name="testMain_HappyPath_Addition()" classname="org.kalkulator.MainTest" time="0.001"/>
+  <testcase name="testGetValidNumber()" classname="org.kalkulator.MainTest" time="0.001"/>
+  <testcase name="testMain_MultipleCalculations()" classname="org.kalkulator.MainTest" time="0.003"/>
+  <testcase name="testAskForContinue_Yes()" classname="org.kalkulator.MainTest" time="0.002"/>
+  <testcase name="testMain_DivisionByZero()" classname="org.kalkulator.MainTest" time="0.002"/>
+  <testcase name="testMain_HappyPath_Division()" classname="org.kalkulator.MainTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

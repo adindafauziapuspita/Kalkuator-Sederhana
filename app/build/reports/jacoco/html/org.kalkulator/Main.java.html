@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">org.kalkulator</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package org.kalkulator;
+
+import java.util.Scanner;
+
+<span class="nc" id="L5">public class Main {</span>
+
+    public static void main(String[] args) {
+<span class="fc" id="L8">        Scanner scanner = new Scanner(System.in);</span>
+<span class="fc" id="L9">        boolean lanjut = true;</span>
+
+<span class="fc" id="L11">        System.out.println(&quot;======================================&quot;);</span>
+<span class="fc" id="L12">        System.out.println(&quot;Selamat datang di Kalkulator Sederhana&quot;);</span>
+<span class="fc" id="L13">        System.out.println(&quot;======================================&quot;);</span>
+
+<span class="fc bfc" id="L15" title="All 2 branches covered.">        while (lanjut) {</span>
+            try {
+<span class="fc" id="L17">                showMenu();</span>
+
+<span class="fc" id="L19">                String pilihan = getOperatorChoice(scanner);</span>
+                
+<span class="fc" id="L21">                Validation.validasiOperator(pilihan.charAt(0));</span>
+
+<span class="fc" id="L23">                double num1 = getValidNumber(scanner);</span>
+<span class="fc" id="L24">                Validation.validasiInput(num1, 0);</span>
+<span class="fc" id="L25">                double num2 = getValidNumber(scanner);</span>
+<span class="fc" id="L26">                Validation.validasiInput(num1, num2);</span>
+
+<span class="fc" id="L28">                Validation.validasiPembagi(num2, pilihan.charAt(0));</span>
+
+<span class="fc" id="L30">                double hasil = Calculate.calculate(pilihan.charAt(0), num1, num2);</span>
+<span class="fc" id="L31">                System.out.println(&quot;======================================&quot;);</span>
+<span class="fc" id="L32">                System.out.println(&quot;Hasil: &quot; + hasil);</span>
+<span class="fc" id="L33">                System.out.println(&quot;======================================&quot;);</span>
+
+<span class="fc" id="L35">            } catch (IllegalArgumentException e) {</span>
+<span class="fc" id="L36">                System.out.println(e.getMessage());</span>
+<span class="fc" id="L37">            }</span>
+
+<span class="fc" id="L39">            lanjut = askForContinue(scanner);</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">            if (!lanjut) {</span>
+<span class="fc" id="L41">                System.out.println(&quot;======================================&quot;);</span>
+<span class="fc" id="L42">                System.out.println(&quot;Terima kasih telah menggunakan kalkulator!&quot;);</span>
+<span class="fc" id="L43">                System.out.println(&quot;======================================&quot;);</span>
+            }
+        }
+<span class="fc" id="L46">        scanner.close();</span>
+<span class="fc" id="L47">    }</span>
+
+    public static void showMenu() {
+<span class="fc" id="L50">        System.out.println(&quot;======================================&quot;);</span>
+<span class="fc" id="L51">        System.out.println(&quot;Pilih operasi yang ingin Anda lakukan:&quot;);</span>
+<span class="fc" id="L52">        System.out.println(&quot;1. Penjumlahan (+)&quot;);</span>
+<span class="fc" id="L53">        System.out.println(&quot;2. Pengurangan (-)&quot;);</span>
+<span class="fc" id="L54">        System.out.println(&quot;3. Perkalian (*)&quot;);</span>
+<span class="fc" id="L55">        System.out.println(&quot;4. Pembagian (/)&quot;);</span>
+<span class="fc" id="L56">        System.out.println(&quot;======================================&quot;);</span>
+<span class="fc" id="L57">    }</span>
+
+    public static String getOperatorChoice(Scanner scanner) {
+<span class="fc" id="L60">        System.out.print(&quot;Masukkan pilihan Anda (1/2/3/4): &quot;);</span>
+<span class="fc" id="L61">        return scanner.nextLine();</span>
+    }
+
+    public static double getValidNumber(Scanner scanner) {
+        double num;
+<span class="fc" id="L66">        System.out.print(&quot;Masukkan bilangan dengan rentang -32768 s.d. 32767: &quot;);</span>
+<span class="fc" id="L67">        String input = scanner.nextLine();</span>
+<span class="fc" id="L68">        num = Validation.validasiInputAngka(input);</span>
+<span class="fc" id="L69">        return num;</span>
+    }
+
+    public static boolean askForContinue(Scanner scanner) {
+<span class="fc" id="L73">        System.out.print(&quot;Apakah Anda ingin melakukan perhitungan lagi? (y/n): &quot;);</span>
+<span class="fc" id="L74">        String jawaban = scanner.nextLine();</span>
+<span class="fc" id="L75">        return jawaban.equalsIgnoreCase(&quot;y&quot;);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

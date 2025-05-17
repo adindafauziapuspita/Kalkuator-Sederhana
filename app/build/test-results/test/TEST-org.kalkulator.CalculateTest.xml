@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.kalkulator.CalculateTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-05-16T23:54:31.206Z" hostname="DESKTOP-8NSG9AB" time="0.049">
+  <properties/>
+  <testcase name="testBagiDenganNol()" classname="org.kalkulator.CalculateTest" time="0.034"/>
+  <testcase name="testBagi()" classname="org.kalkulator.CalculateTest" time="0.005"/>
+  <testcase name="testKali()" classname="org.kalkulator.CalculateTest" time="0.001"/>
+  <testcase name="testPilihanTidakValid()" classname="org.kalkulator.CalculateTest" time="0.001"/>
+  <testcase name="testKurang()" classname="org.kalkulator.CalculateTest" time="0.001"/>
+  <testcase name="testTambah()" classname="org.kalkulator.CalculateTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

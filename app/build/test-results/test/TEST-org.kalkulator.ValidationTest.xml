@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.kalkulator.ValidationTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2025-05-16T23:54:31.321Z" hostname="DESKTOP-8NSG9AB" time="0.029">
+  <properties/>
+  <testcase name="testValidasiInput_OutOfRange()" classname="org.kalkulator.ValidationTest" time="0.004"/>
+  <testcase name="testValidasiPembagi_NonZero()" classname="org.kalkulator.ValidationTest" time="0.004"/>
+  <testcase name="testValidasiInputAngka_ValidNumber()" classname="org.kalkulator.ValidationTest" time="0.001"/>
+  <testcase name="testValidasiOperator_Valid()" classname="org.kalkulator.ValidationTest" time="0.003"/>
+  <testcase name="testValidasiInput_ValidRange()" classname="org.kalkulator.ValidationTest" time="0.002"/>
+  <testcase name="testValidasiOperator_Invalid()" classname="org.kalkulator.ValidationTest" time="0.001"/>
+  <testcase name="testValidasiInputAngka_InvalidNumber()" classname="org.kalkulator.ValidationTest" time="0.002"/>
+  <testcase name="testValidasiPembagi_ZeroButNotDivision()" classname="org.kalkulator.ValidationTest" time="0.002"/>
+  <testcase name="testValidasiPembagi_Zero()" classname="org.kalkulator.ValidationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

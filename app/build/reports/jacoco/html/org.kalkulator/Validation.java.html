@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Validation.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">org.kalkulator</a> &gt; <span class="el_source">Validation.java</span></div><h1>Validation.java</h1><pre class="source lang-java linenums">package org.kalkulator;
+
+<span class="nc" id="L3">public class Validation {</span>
+
+    public static double validasiInputAngka(String input) {
+        try {
+<span class="fc" id="L7">            return Double.parseDouble(input);</span>
+<span class="fc" id="L8">        } catch (NumberFormatException e) {</span>
+<span class="fc" id="L9">            throw new IllegalArgumentException(&quot;Error: Input bukan angka.&quot;);</span>
+        }
+    }
+
+    public static void validasiInput(double num1, double num2){
+<span class="pc bpc" id="L14" title="1 of 4 branches missed.">        if (num1 &lt; -32768 || num1 &gt; 32767){</span>
+<span class="fc" id="L15">            throw new IllegalArgumentException(&quot;Error: Bilangan Pertama tidak berada pada rentang.&quot;);</span>
+        }
+<span class="pc bpc" id="L17" title="1 of 4 branches missed.">        if (num2 &lt; -32768 || num2 &gt; 32767){</span>
+<span class="fc" id="L18">            throw new IllegalArgumentException(&quot;Error: Bilangan Kedua tidak berada pada rentang.&quot;);</span>
+        }
+<span class="fc" id="L20">    }</span>
+
+    public static void validasiOperator(char pilihan){
+<span class="fc bfc" id="L23" title="All 8 branches covered.">        if (pilihan != ('1') &amp;&amp; pilihan != ('2') &amp;&amp; pilihan != ('3') &amp;&amp; pilihan !=('4')) {</span>
+<span class="fc" id="L24">            throw new IllegalArgumentException( &quot;Error: operator tidak valid&quot;);</span>
+        }
+<span class="fc" id="L26">    }</span>
+
+    public static void validasiPembagi(double num2, char pilihan) {
+<span class="fc bfc" id="L29" title="All 4 branches covered.">        if (pilihan == '4' &amp;&amp; num2 == 0) {</span>
+<span class="fc" id="L30">            throw new IllegalArgumentException(&quot;Error: pembagi tidak boleh nol&quot;);</span>
+        }
+<span class="fc" id="L32">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>
