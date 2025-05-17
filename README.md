@@ -149,10 +149,10 @@ Kelas Validation
 Kelas Calculate
 ![alt text](image-8.png)
 ### Ringkasan Hasil Cakupan
-Statement Coverage: 96%
-Branch Coverage: 93%
-Class Coverage: 100%
-Method Coverage: 100%
+- Statement Coverage: 96%
+- Branch Coverage: 93%
+- Class Coverage: 100%
+- Method Coverage: 100%
 
 ## Dependencies Used
 
