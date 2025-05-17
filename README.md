@@ -128,6 +128,32 @@ Adapun keterangan tambahan lainnya yaitu :
  - 0 Failures menunjukkan bahwa tidak ada test script (unit test) yang menghasilkan hasil pengujian berupa FAIL
  - 0 Ignored menunjukkan bahwa tidak ada test script (unit test) yang terlewat atau dihiraukan.
 
+### Test Coverage Report (JaCoCo)
+Setelah menjalankan pengujian dengan perintah:
+```
+gradle test jacocoTestReport
+```
+Laporan cakupan kode akan dihasilkan secara otomatis dan dapat diakses di:
+```
+app\build\reports\jacoco\index.html
+```
+![alt text](image-4.png)
+![alt text](image-5.png)
+
+Kelas Main
+![alt text](image-6.png)
+
+Kelas Validation
+![alt text](image-7.png)
+
+Kelas Calculate
+![alt text](image-8.png)
+### Ringkasan Hasil Cakupan
+Statement Coverage: 96%
+Branch Coverage: 93%
+Class Coverage: 100%
+Method Coverage: 100%
+
 ## Dependencies Used
 
 Kami menambahkan beberapa dependency yang digunakan untuk menunjang kebutuhan program kami untuk dapat dijalankan dengan baik, Dependency tersebut antara lain : 
